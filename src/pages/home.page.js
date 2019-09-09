@@ -1,7 +1,12 @@
 import React from "react";
+import TitleBarComponent from "../components/title-bar/title-bar.component";
 
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <TitleBarComponent title="Quinn Hodges" />
+    </div>
+  );
 }
 
 export default Home;

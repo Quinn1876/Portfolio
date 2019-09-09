@@ -9,6 +9,9 @@ import MenuIcon from "@material-ui/icons/Menu";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
+  },
+  appbar: {
+    color: theme.palette.primary
   }
 }));
 
@@ -16,7 +19,7 @@ export default function TitleBar(props) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar className={classes.appbar} position="static">
         <Toolbar variant="dense">
           <IconButton
             edge="start"
