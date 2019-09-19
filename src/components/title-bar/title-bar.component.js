@@ -1,3 +1,9 @@
+/*
+The goal of the Title bar is to provide easy to use navigation options for the user.
+The user should be able to navigate to any of the main pages from the title bar.
+The user should be able to navigate to my linkedin/github page.
+*/
+
 import React from "react";
 
 import AppBar from "@material-ui/core/AppBar";
@@ -27,7 +33,7 @@ class TitleBar extends React.Component {
     window.open("https://github.com/Quinn1876");
   }
 
-  // TODO: Add Event Handlers
+  // TODO: Menu/Tab Event Handlers
   render() {
     const {
       classes: { root, appbar, title, icon, menuButton }
