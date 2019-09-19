@@ -6,14 +6,13 @@ import {
   Switch,
   Redirect
 } from "react-router-dom";
-import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
+import MUIprovider from "./utils/mui-provider";
 import Home from "./pages/home.page";
 import Contact from "./pages/contact.page";
 import Notfound from "./pages/notfound.page";
-import theme from "./theme";
 
 const routing = (
-  <MuiThemeProvider theme={theme}>
+  <MUIprovider>
     <Router>
       <div>
         {/* <ul>
@@ -35,6 +34,6 @@ const routing = (
         </Switch>
       </div>
     </Router>
-  </MuiThemeProvider>
+  </MUIprovider>
 );
 ReactDOM.render(routing, document.getElementById("root"));
