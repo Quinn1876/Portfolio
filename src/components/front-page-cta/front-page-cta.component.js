@@ -23,14 +23,14 @@ class FrontPageCTA extends React.Component {
   render() {
     const {
       backdropImage,
-      classes: { root, backdrop },
-      title
+      classes: { container, backdrop },
+      title,
+      altText
     } = this.props;
     return (
-      <div className={root}>
-        <div backgroundImage={backdropImage} className={backdrop}>
-          <Typography text={title} />
-        </div>
+      <div className={container}>
+        <img className={backdrop} src={backdropImage} alt={altText} />
+        {/* <Typography>{title}</Typography> */}
       </div>
     );
   }

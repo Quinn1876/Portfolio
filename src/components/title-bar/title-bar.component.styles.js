@@ -1,6 +1,7 @@
 const styles = theme => ({
   root: {
-    display: "flex"
+    display: "flex",
+    width: "100%"
   },
   appbar: {
     color: theme.palette.primary

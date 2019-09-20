@@ -11,29 +11,22 @@ import Home from "./pages/home.page";
 import Contact from "./pages/contact.page";
 import Notfound from "./pages/notfound.page";
 
-const routing = (
-  <MUIprovider>
-    <Router>
-      <div>
-        {/* <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/users">Users</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul> */}
+const App = () => {
+  document.body.style.margin = 0;
+  document.body.style.display = "inline";
+  document.body.style.overflow = "hidden";
+  return (
+    <MUIprovider>
+      <Router>
         <Switch>
           <Route path="/home" component={Home} />
           <Redirect exact from="/" to="/home" />
           <Route path="/contact" component={Contact} />
-          <Route component={Notfound} />
+          {/* <Route component={Notfound} /> */}
         </Switch>
-      </div>
-    </Router>
-  </MUIprovider>
-);
-ReactDOM.render(routing, document.getElementById("root"));
+      </Router>
+    </MUIprovider>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
