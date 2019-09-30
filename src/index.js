@@ -14,7 +14,9 @@ import Notfound from "./pages/notfound.page";
 const App = () => {
   document.body.style.margin = 0;
   document.body.style.display = "inline";
-  document.body.style.overflow = "hidden";
+  document.body.style.maxWidth = "100%";
+  document.body.style.overflowX = "hidden";
+  // document.body.style.overflow = "hidden";
   return (
     <MUIprovider>
       <Router>
