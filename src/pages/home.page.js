@@ -1,16 +1,18 @@
 import React from "react";
 
 import TitleBarComponent from "../components/title-bar/title-bar.component";
-import FrontPageCTA from "../components/front-page-cta/front-page-cta.component";
-
-import HTN from "../static/Stock Programing Photo for htn.png";
+import WelcomeSlideComponent from "../components/welcome-slide/welcome-slide.component";
+import AboutMeSlideComponent from "../components/about-me-slide/about-me-slide.component";
 
 const Home = props => {
   const classes = props;
   return (
     <div className={classes.root}>
       <TitleBarComponent title="Quinn Hodges" />
-      <FrontPageCTA title="QUINN" backdropImage={HTN} />
+      <WelcomeSlideComponent
+        onLearnMore={() => window.scrollTo(0, window.innerHeight)}
+      />
+      <AboutMeSlideComponent />
     </div>
   );
 };
