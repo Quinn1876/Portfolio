@@ -10,7 +10,13 @@ const Home = props => {
     <div className={classes.root}>
       <TitleBarComponent title="Quinn Hodges" />
       <WelcomeSlideComponent
-        onLearnMore={() => window.scrollTo(0, window.innerHeight)}
+        onLearnMore={() =>
+          window.scrollTo({
+            left: 0,
+            top: window.innerHeight,
+            behavior: "smooth"
+          })
+        }
       />
       <AboutMeSlideComponent />
     </div>

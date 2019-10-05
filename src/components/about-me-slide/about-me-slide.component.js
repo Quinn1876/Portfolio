@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   container: {
-    backgroundColor: theme.palette.darkBlue.main,
+    backgroundColor: theme.palette.lightBlue.main,
     [theme.breakpoints.up("md")]: {
       height: "100vh",
       width: "50vw",
@@ -50,15 +50,17 @@ const useStyles = makeStyles(theme => ({
   },
   header: {
     width: "max-content",
-    paddingTop: "24px",
+    paddingTop: theme.spacing(5),
     alignSelf: "center"
   },
   aboutMeText: {
     paddingRight: theme.spacing(2),
-    paddingLeft: theme.spacing(2)
+    paddingLeft: theme.spacing(2),
+    paddingTop: theme.spacing(3)
   }
 }));
 
+// TODO: Add Scroll Buttons and Redirect to About me page
 const AboutMeSlide = props => {
   const {
     root,
@@ -71,29 +73,29 @@ const AboutMeSlide = props => {
   return (
     <div className={root}>
       <div className={container}>
+        {/* Add a proper headshot of me to this img */}
         <img
           src="https://raw.githubusercontent.com/Quinn1876/Portfolio/master/src/static/htn.jpg"
-          alt="Self"
+          alt="Placeholder"
           className={photo}
         />
       </div>
       <div className={container}>
         <Paper className={textContainer}>
           <Typography className={header} variant="h4">
-            About Me:
+            About Me
           </Typography>
+          {/* TODO: add Proper Info */}
           <Typography variant="body1" className={aboutMeText}>
-            There is no one who loves pain itself, who seeks after it and wants
-            to have it, simply because it is pain..." What is Lorem Ipsum? Lorem
-            Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only
-            five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum
+            &emsp;Hi there! I'd like to tell you bit about myself. My name is
+            Quinn and I am currently studying Computer Engineering at the
+            University of Waterloo. As part of my studies at uWaterloo, I have
+            had the opportunity to work on some incredible teams, including the
+            teams at HelloGbye and SnapTravel. While working with these teams, I
+            have been able to contribute to some interesting products that are
+            pushing the travel industry into a brand-new technological era.
+            Moving forward, I’m excited to continue to work on innovative and
+            cutting edge technologies.
           </Typography>
         </Paper>
       </div>
