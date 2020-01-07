@@ -29,10 +29,10 @@ const useStyles = makeStyles(theme => ({
   photo: {
     marginTop: "10vh",
     marginBottom: "10vh",
-    marginLeft: "5vw",
-    maxWidth: "80%",
+    marginLeft: "4vw",
     height: "auto",
-    borderRadius: "4px"
+    borderRadius: "4px",
+    alignSelf: "flex-start"
   },
   textContainer: {
     [theme.breakpoints.up("md")]: {
@@ -56,7 +56,8 @@ const useStyles = makeStyles(theme => ({
   aboutMeText: {
     paddingRight: theme.spacing(2),
     paddingLeft: theme.spacing(2),
-    paddingTop: theme.spacing(3)
+    paddingTop: theme.spacing(3),
+    fontSize: "1.25rem"
   }
 }));
 
@@ -75,7 +76,7 @@ const AboutMeSlide = props => {
       <div className={container}>
         {/* Add a proper headshot of me to this img */}
         <img
-          src="https://raw.githubusercontent.com/Quinn1876/Portfolio/master/src/static/htn.jpg"
+          src="https://raw.githubusercontent.com/Quinn1876/Portfolio/master/src/static/headshot.jpg"
           alt="Placeholder"
           className={photo}
         />

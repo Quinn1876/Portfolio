@@ -28,7 +28,8 @@ const styles = theme => ({
     zIndex: 1000
   },
   appbar: {
-    background: theme.palette.darkBlue.main,
+    // background: theme.palette.darkBlue.main,
+    background: "transparent",
     border: "0",
     boxShadow:
       "0px 2px 4px -1px rgba(0,0,0,0), 0px 4px 5px 0px rgba(0,0,0,0), 0px 1px 10px 0px rgba(0,0,0,0)"
@@ -67,39 +68,39 @@ class TitleBar extends React.Component {
 
     return (
       <div className={root}>
-        <HideOnScroll>
-          <AppBar className={appbar} position="static">
-            <Toolbar variant="dense">
-              <IconButton
-                edge="start"
-                className={menuButton}
-                color="inherit"
-                aria-label="menu"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Typography className={title} variant="h6">
-                {this.props.title}
-              </Typography>
-              <IconButton className={icon} onClick={this.onClickLinkedIn}>
-                <IconSVG
-                  className={icon}
-                  color="white"
-                  path={mdiLinkedinBox}
-                  size={1}
-                />
-              </IconButton>
-              <IconButton className={icon} onClick={this.onClickGitHub}>
-                <IconSVG
-                  className={icon}
-                  color="white"
-                  path={mdiGithubCircle}
-                  size={1}
-                />
-              </IconButton>
-            </Toolbar>
-          </AppBar>
-        </HideOnScroll>
+        {/* <HideOnScroll> */}
+        <AppBar className={appbar} position="static">
+          <Toolbar variant="dense">
+            <IconButton
+              edge="start"
+              className={menuButton}
+              color="inherit"
+              aria-label="menu"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography className={title} variant="h6">
+              {this.props.title}
+            </Typography>
+            <IconButton className={icon} onClick={this.onClickLinkedIn}>
+              <IconSVG
+                className={icon}
+                color="white"
+                path={mdiLinkedinBox}
+                size={1}
+              />
+            </IconButton>
+            <IconButton className={icon} onClick={this.onClickGitHub}>
+              <IconSVG
+                className={icon}
+                color="white"
+                path={mdiGithubCircle}
+                size={1}
+              />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+        {/* </HideOnScroll> */}
       </div>
     );
   }

@@ -7,7 +7,7 @@ import {
   Redirect
 } from "react-router-dom";
 import MUIprovider from "./utils/mui-provider";
-import Home from "./pages/home.page";
+import Home from "./pages/home/home.page";
 import Contact from "./pages/contact.page";
 import Notfound from "./pages/notfound.page";
 

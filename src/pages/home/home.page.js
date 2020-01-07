@@ -1,8 +1,8 @@
 import React from "react";
 
-import TitleBarComponent from "../components/title-bar/title-bar.component";
-import WelcomeSlideComponent from "../components/welcome-slide/welcome-slide.component";
-import AboutMeSlideComponent from "../components/about-me-slide/about-me-slide.component";
+import TitleBarComponent from "../../components/title-bar/title-bar.component";
+import WelcomeSlideComponent from "./welcome-slide.component";
+import AboutMeSlideComponent from "./about-me-slide.component";
 
 const Home = props => {
   const classes = props;
