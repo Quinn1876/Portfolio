@@ -19,14 +19,15 @@ const App = () => {
   // document.body.style.overflow = "hidden";
   return (
     <MUIprovider>
-      <Router>
+      {/* <Router>
         <Switch>
           <Route path="/home" component={Home} />
           <Redirect exact from="/" to="/home" />
           <Route path="/contact" component={Contact} />
-          {/* <Route component={Notfound} /> */}
+          <Route component={Notfound} />
         </Switch>
-      </Router>
+      </Router> */}
+      <Home />
     </MUIprovider>
   );
 };
