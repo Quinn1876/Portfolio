@@ -27,12 +27,11 @@ const useStyles = makeStyles(theme => ({
     }
   },
   photo: {
-    marginTop: "10vh",
-    marginBottom: "10vh",
-    marginLeft: "4vw",
-    height: "auto",
+    marginTop: "-10vh",
+    height: "100vh",
     borderRadius: "4px",
-    alignSelf: "flex-start"
+    alignSelf: "flex-start",
+    transform: "scale(0.6)"
   },
   textContainer: {
     [theme.breakpoints.up("md")]: {
