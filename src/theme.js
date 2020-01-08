@@ -7,6 +7,7 @@ export default createMuiTheme({
     darkGrey: { main: "#4a494c", hover: "#323234" },
     lightBlue: { main: "#379683" },
     darkBlue: { main: "#557a95" },
-    beige: { main: "#b1a296" }
+    beige: { main: "#b1a296" },
+    white: { main: "#FFFFFF" }
   }
 });

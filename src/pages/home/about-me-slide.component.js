@@ -45,19 +45,24 @@ const useStyles = makeStyles(theme => ({
       display: "flex",
       alignContent: "center",
       justifyContent: "flex-start",
-      flexDirection: "column"
+      flexDirection: "column",
+      backgroundColor: theme.palette.darkBlue.main,
+      color: theme.palette.white.main
+      // backgroundColor: theme.palette.beige.main,
+      // color: theme.palette.secondary.main
     }
   },
   header: {
     width: "max-content",
     paddingTop: theme.spacing(5),
-    alignSelf: "center"
+    alignSelf: "center",
+    fontFamily: "Permanent Marker"
   },
   aboutMeText: {
     paddingRight: theme.spacing(2),
     paddingLeft: theme.spacing(2),
     paddingTop: theme.spacing(3),
-    fontSize: "1.25rem"
+    fontSize: "1.25em"
   }
 }));
 
@@ -91,12 +96,12 @@ const AboutMeSlide = props => {
             &emsp;Hi there! I'd like to tell you bit about myself. My name is
             Quinn and I am currently studying Computer Engineering at the
             University of Waterloo. As part of my studies at uWaterloo, I have
-            had the opportunity to work on some incredible teams, including the
-            teams at HelloGbye and SnapTravel. While working with these teams, I
-            have been able to contribute to some interesting products that are
-            pushing the travel industry into a brand-new technological era.
-            Moving forward, I’m excited to continue to work on innovative and
-            cutting edge technologies.
+            had the opportunity to work on some incredible teams, HelloGbye and
+            SnapTravel. While working with these teams, I have been able to
+            contribute to some interesting products that are pushing the travel
+            industry into a brand-new technological era. Moving forward, I’m
+            excited to continue to work on innovative and cutting edge
+            technologies.
           </Typography>
         </Paper>
       </div>

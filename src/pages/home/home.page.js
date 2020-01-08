@@ -1,7 +1,7 @@
 import React from "react";
 
 import TitleBarComponent from "../../components/title-bar/title-bar.component";
-import WelcomeSlideComponent from "./welcome-slide.component";
+// import WelcomeSlideComponent from "./welcome-slide.component";
 import AboutMeSlideComponent from "./about-me-slide.component";
 
 const Home = props => {
@@ -9,7 +9,7 @@ const Home = props => {
   return (
     <div className={classes.root}>
       <TitleBarComponent title="Quinn Hodges" />
-      <WelcomeSlideComponent
+      {/* <WelcomeSlideComponent
         onLearnMore={() =>
           window.scrollTo({
             left: 0,
@@ -17,7 +17,7 @@ const Home = props => {
             behavior: "smooth"
           })
         }
-      />
+      /> */}
       <AboutMeSlideComponent />
     </div>
   );

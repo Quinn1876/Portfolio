@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme => ({
   welcomeText: {
     textAlign: "center",
     color: "white",
-    flex: 2
+    flex: 2,
+    fontFamily: ""
   },
   learnButton: {
     textAlign: "center",
@@ -57,7 +58,7 @@ const WelcomeSlide = props => {
       <div className={spacerW} />
       <div className={textWrapper}>
         <Typography variant="h2" className={welcomeText}>
-          Hello! My name is Quinn,
+          Hello! My name is Quinn
         </Typography>
         <Typography variant="h3" className={welcomeText}>
           Welcome to my Portfolio
