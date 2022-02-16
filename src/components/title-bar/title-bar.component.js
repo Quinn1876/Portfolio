@@ -22,14 +22,15 @@ import { mdiGithubCircle } from "@mdi/js";
 const styles = theme => ({
   root: {
     display: "flex",
-    width: "100%",
+    // width: "100%",
     position: "fixed",
     top: 0,
-    zIndex: 1000
+    zIndex: 1000,
+    margin: "44px 40px 0 40px"
   },
   appbar: {
-    // background: theme.palette.darkBlue.main,
-    background: "transparent",
+    background: theme.palette.orange.primary,
+    // background: "transparent",
     border: "0",
     boxShadow:
       "0px 2px 4px -1px rgba(0,0,0,0), 0px 4px 5px 0px rgba(0,0,0,0), 0px 1px 10px 0px rgba(0,0,0,0)"
@@ -41,8 +42,8 @@ const styles = theme => ({
   icon: {
     float: "right"
   },
-  menuButton: {
-    marginRight: theme.spacing(2)
+  titleContainer: {
+    width: "100%"
   }
 });
 
@@ -50,6 +51,10 @@ class TitleBar extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
+
+    this.onClickGitHub = this.onClickGitHub.bind();
+    this.onClickLinkedIn = this.onClickLinkedIn.bind();
+    this.onClickName = this.onClickName.bind();
   }
 
   onClickLinkedIn() {
@@ -60,10 +65,13 @@ class TitleBar extends React.Component {
     window.open("https://github.com/Quinn1876");
   }
 
-  // TODO: Menu/Tab Event Handlers
+  onClickName() {
+    // TODO Make this route to the home page
+  }
+
   render() {
     const {
-      classes: { root, appbar, title, icon, menuButton }
+      classes: { root, appbar, title, icon, titleContainer }
     } = this.props;
 
     return (
@@ -71,17 +79,11 @@ class TitleBar extends React.Component {
         {/* <HideOnScroll> */}
         <AppBar className={appbar} position="static">
           <Toolbar variant="dense">
-            <IconButton
-              edge="start"
-              className={menuButton}
-              color="inherit"
-              aria-label="menu"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography className={title} variant="h6">
-              {this.props.title}
-            </Typography>
+            <div className={titleContainer} onClick={this.onClickName}>
+              <Typography className={title} variant="h6">
+                {this.props.title}
+              </Typography>
+            </div>
             <IconButton className={icon} onClick={this.onClickLinkedIn}>
               <IconSVG
                 className={icon}
